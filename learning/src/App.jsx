@@ -240,6 +240,31 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      <section className="w-full bg-[#f9f9f9] py-12 flex flex-col items-center">
+        <div className="max-w-4xl w-full flex flex-col md:flex-row items-center justify-center gap-6 mx-auto">
+          <h3 className="text-xl md:text-2xl font-semibold text-center md:text-left flex-1">
+            Join our community for branding tips and insights straight to your inbox.
+          </h3>
+          <form className="flex w-full md:w-auto flex-1 max-w-xl" action="mailto:midejayeoba1@gmail.com" method="post" enctype="text/plain">
+            <input
+              type="email"
+              placeholder="Enter email address"
+              className="flex-1 px-6 py-4 rounded-full text-lg bg-white placeholder-gray-400 outline-none"
+            />
+            <button
+              type="submit"
+              onClick={(e) => {
+                e.preventDefault();
+                alert("Sent!");
+              }}
+              className="ml-2 bg-[#FF8533] hover:bg-[#ff9b4b] text-white font-semibold text-lg px-10 py-3 rounded-full transition-colors duration-200"
+            >
+              Join us
+            </button>
+          </form>
+        </div>
+      </section>
     </div>
   )
 }
