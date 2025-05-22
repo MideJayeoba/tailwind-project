@@ -181,20 +181,46 @@ export default function App() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="max-w-7xl w-full mx-auto px-4 mt-10 md:mt-20">
-        <div className='flex flex-col md:flex-row w-full max-w-7xl px-0 md:px-4'>
-          <div className="text-center flex flex-col p-4 md:m-20 md:mr-24 self-center w-full">
-            <p className="text-[24px] font-bold mb-2 text-[#020340] md:text-[36px]">Testimonials</p>
-            <p className="text-[#020340] text-[15px] md:text-[24px] mb-4">
-              What our clients say about us
-            </p>
-            <p>
-              Hear from the people who’ve trusted us to elevate their brands.
-            </p>
-          </div>
-        </div>
-      </section>
+      // ...existing code...
+
+{/* Testimonials Section */}
+<section id="testimonials" className="max-w-7xl w-full mx-auto px-4 mt-10 md:mt-20">
+  <div className="flex flex-col md:flex-row w-full max-w-7xl px-0 md:px-4">
+    {/* Left: Heading */}
+    <div className="flex-1 flex flex-col justify-center md:items-start items-center text-left md:pr-16">
+      <p className="text-[#FF8533] text-[16px] md:text-[18px] mb-1 font-medium tracking-wide">Testimonials</p>
+      <h2 className="text-[#020340] font-bold text-[24px] md:text-[32px] mb-2">What Our Clients Say</h2>
+      <p className="text-[#020340] text-[16px] md:text-[20px] max-w-md">
+        Hear from the people who’ve trusted us to elevate their brands.
+      </p>
+    </div>
+    {/* Right: Testimonial Cards */}
+    <div className="flex-1 flex flex-col gap-8 mt-8 md:mt-0">
+      <div className="bg-white rounded-lg shadow-md p-6 relative max-w-xl ml-auto border-l-4 border-green-600">
+        <span className="absolute top-4 right-6 text-3xl text-[#020340] font-bold select-none">”</span>
+        <h3 className="font-bold text-[#020340] mb-1">Taiwan Airways</h3>
+        <p className="text-[#020340]">
+          BrandFolio transformed our brand into something we’re incredibly proud of. Their creativity and professionalism are unmatched.
+        </p>
+      </div>
+      <div className="bg-white rounded-lg shadow-md p-6 relative max-w-xl ml-auto border-l-4 border-blue-700">
+        <span className="absolute top-4 right-6 text-3xl text-[#020340] font-bold select-none">”</span>
+        <h3 className="font-bold text-[#020340] mb-1">Taiwan Airways</h3>
+        <p className="text-[#020340]">
+          Working with BrandFolio was a game-changer. The branding has truly resonated with our audience.
+        </p>
+      </div>
+      <div className="bg-white rounded-lg shadow-md p-6 relative max-w-xl ml-auto border-l-4 border-purple-700">
+        <span className="absolute top-4 right-6 text-3xl text-[#020340] font-bold select-none">”</span>
+        <h3 className="font-bold text-[#020340] mb-1">Taiwan Airways</h3>
+        <p className="text-[#020340]">
+          BrandFolio transformed our brand into something we’re incredibly proud of. Their creativity and professionalism are unmatched.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+// ...existing code...
 
       {/* Contact Section */}
       <section id="contact" className="max-w-7xl w-full mx-auto px-4 mt-10 md:mt-20">
