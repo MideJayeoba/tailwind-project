@@ -9,6 +9,7 @@ import designTools from './assets/designtools1.png'
 import message from './assets/message-text.png'
 import pentool from './assets/pen-tool-2.png'
 import bezier from './assets/bezier.png'
+import meetingRoom from './assets/image.png'
 
 let navbar = ["Home", "Services", "Testimonials", "About", "Contact"]
 
@@ -221,9 +222,23 @@ export default function App() {
       </section>
 
 
-      {/* Contact Section */}
       <section id="contact" className="max-w-7xl w-full mx-auto px-4 mt-10 md:mt-20">
-        {/* Contact content goes here */}
+        <div className="flex flex-col md:flex-row items-center justify-center bg-[#f7f3f1] rounded-3xl p-6 md:p-16 shadow-md" style={{backgroundImage: "url('/your-bg-pattern.svg')", backgroundSize: 'cover'}}>
+          <img
+            src={meetingRoom} // replace with your image import if needed
+            alt="Team meeting"
+            className="w-full max-w-md rounded-2xl shadow-lg mb-8 md:mb-0 md:mr-12"
+          />
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <h2 className="text-[#020340] font-bold text-2xl md:text-3xl mb-4">Ready to Build Your Brand?</h2>
+            <p className="text-[#020340] text-lg md:text-xl mb-8 max-w-lg">
+              Let’s work together to create a brand that speaks volumes. Whether you’re just starting out or need a refresh, we’re here to help.
+            </p>
+            <button className="bg-[#FF8533] text-white px-8 py-4 rounded-2xl text-lg font-medium hover:bg-[#020340] transition-colors duration-300">
+              Contact Us Today
+            </button>
+          </div>
+        </div>
       </section>
     </div>
   )
