@@ -123,13 +123,13 @@ export default function App() {
 
       {/* About Section */}
       <section id="about" className="max-w-7xl w-full mx-auto px-4 mt-10 md:mt-20">
-        <div className="flex flex-col md:flex-row mt-10 md:mt-20 w-full max-w-7xl px-0 md:px-4">
+        <div className="flex flex md:flex-row mt-10 md:mt-20 w-full max-w-7xl px-0 md:px-4">
           <img
-            className="p-2 w-full max-w-[300px] md:max-w-[484px] rounded-lg h-auto md:h-[579px] object-cover mx-auto"
+            className="p-2 w-full max-w-[200px]max-h-[150px] md:max-w-[484px] rounded-lg h-auto md:h-[579px] object-cover mx-auto"
             src={group}
             alt=""
           />
-          <div className="flex p-4 md:m-20 md:mr-24 self-center">
+          <div className="flex flex-col p-4 md:m-20 md:mr-24 self-center">
             <p className="mb-2 text-[16px] md:text-[18px] text-[#020340]">Who We Are</p>
             <p className="text-[15px] md:text-[24px] mb-4 text-[#020340]">
               At BrandFolio, we specialize in crafting strategic and creative brand identities that resonate. With 5 years of experience, we’ve helped 100+ businesses transform their ideas into powerful visual stories. From startups to established enterprises, we’re committed to building brands that stand the test of time.
