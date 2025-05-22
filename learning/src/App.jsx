@@ -129,7 +129,7 @@ export default function App() {
             src={group}
             alt=""
           />
-          <div className="flex flex-col p-4 md:m-20 md:mr-24 self-center">
+          <div className="flex p-4 md:m-20 md:mr-24 self-center">
             <p className="mb-2 text-[16px] md:text-[18px] text-[#020340]">Who We Are</p>
             <p className="text-[15px] md:text-[24px] mb-4 text-[#020340]">
               At BrandFolio, we specialize in crafting strategic and creative brand identities that resonate. With 5 years of experience, we’ve helped 100+ businesses transform their ideas into powerful visual stories. From startups to established enterprises, we’re committed to building brands that stand the test of time.
