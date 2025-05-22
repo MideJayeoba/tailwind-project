@@ -265,6 +265,49 @@ export default function App() {
           </form>
         </div>
       </section>
+
+      <footer className="w-full bg-[#FF8533] py-16 mt-12">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start gap-12">
+          {/* Brand */}
+          <div className="flex-1 mb-8 md:mb-0">
+            <span className="text-3xl font-bold text-[#020340]">Brand<span className="text-white">Folio</span></span>
+          </div>
+          {/* Quick Links */}
+          <div className="flex-1 mb-8 md:mb-0">
+            <h4 className="text-2xl font-bold text-[#020340] mb-4">Quick links</h4>
+            <ul className="space-y-2 text-lg text-[#020340]">
+              <li>Home</li>
+              <li>About</li>
+              <li>Services</li>
+              <li>Portfolio</li>
+            </ul>
+          </div>
+          {/* Social Media */}
+          <div className="flex-1 mb-8 md:mb-0">
+            <h4 className="text-2xl font-bold text-[#020340] mb-4">Social Media</h4>
+            <div className="flex items-center space-x-6 text-3xl">
+              <a href="#" aria-label="Instagram">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" className="w-8 h-8" />
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" className="w-8 h-8" />
+              </a>
+              <a href="#" aria-label="X">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" className="w-8 h-8" />
+              </a>
+            </div>
+          </div>
+          {/* Contact */}
+          <div className="flex-1">
+            <h4 className="text-2xl font-bold text-[#020340] mb-4">Contact</h4>
+            <ul className="space-y-4 text-lg text-[#020340]">
+              <li>info@brandfolio.com</li>
+              <li>+123 456 7890</li>
+              <li>123 Branding Lane, City, Country</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
