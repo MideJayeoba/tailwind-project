@@ -256,7 +256,6 @@ export default function App() {
             <button
               type="submit"
               onClick={(e) => {
-                e.preventDefault();
                 alert("Sent!");
               }}
               className="ml-none bg-[#FF8533] hover:bg-[#ff9b4b] text-white font-semibold text-lg px-10 py-3 rounded-full transition-colors duration-200"
