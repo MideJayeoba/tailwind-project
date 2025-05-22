@@ -242,8 +242,8 @@ export default function App() {
       </section>
 
       <section className="w-full bg-[#f9f9f9] py-12 flex flex-col items-center">
-        <div className="max-w-4xl w-full flex flex-col md:flex-col items-center justify-center gap-6 mx-auto">
-          <h3 className="text-lg md:text-2lg font-semibold text-center md:text-left">
+        <div className="max-w-4xl w-full flex flex-col md:flex-row items-center justify-center gap-6 mx-auto">
+          <h3 className="text-lg md:text-2lg font-semibold text-center md:text-left flex-1">
             Join our community for branding tips and insights straight to your inbox.
           </h3>
           <form className="flex w-full md:w-auto flex-1 max-w-xl" action="mailto:midejayeoba1@gmail.com" method="post" enctype="text/plain">
