@@ -204,7 +204,7 @@ export default function App() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 relative max-w-xl ml-auto border-l-4 border-blue-700">
-              <span className="absolute top-4 right-6 text-3xl text-[#020340] font-bold select-none">”</span>
+              <span className="absolute top-4 right-10 text-3xl text-[#020340] font-bold select-none">”</span>
               <h3 className="font-bold text-[#020340] mb-1">Taiwan Airways</h3>
               <p className="text-[#020340]">
                 Working with BrandFolio was a game-changer. The branding has truly resonated with our audience.
