@@ -250,7 +250,8 @@ export default function App() {
             <input
               type="email"
               placeholder="Enter email address"
-              className="flex-1 px-6 py-4 rounded-full text-lg bg-white placeholder-gray-400 outline-none"
+              className="flex-1 px-6 py-4 rounded-tl-full rounded-bl-full text-lg bg-white placeholder-gray-400 outline-none mr-none"
+              required
             />
             <button
               type="submit"
