@@ -258,7 +258,7 @@ export default function App() {
               onClick={(e) => {
                 alert("Sent!");
               }}
-              className="ml-[-5px] bg-[#FF8533] hover:bg-[#ff9b4b] text-white font-semibold text-lg px-10 py-3 rounded-full transition-colors duration-200"
+              className="ml-[-1rem] bg-[#FF8533] hover:bg-[#ff9b4b] text-white font-semibold text-lg px-10 py-3 rounded-full transition-colors duration-200"
             >
               Join us
             </button>
