@@ -181,7 +181,6 @@ export default function App() {
         </div>
       </section>
 
-      // ...existing code...
 
       {/* Testimonials Section */}
       <section id="testimonials" className="max-w-7xl w-full mx-auto px-4 mt-10 md:mt-20">
@@ -203,7 +202,7 @@ export default function App() {
                 BrandFolio transformed our brand into something we’re incredibly proud of. Their creativity and professionalism are unmatched.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6 relative max-w-xl ml-auto border-l-4 border-blue-700">
+            <div className="m-[-10px] bg-white rounded-lg shadow-md p-6 relative max-w-xl ml-auto border-l-4 border-blue-700">
               <span className="absolute top-4 left-4 text-3xl text-[#020340] font-bold select-none">”</span>
               <h3 className="font-bold text-[#020340] mb-1">Taiwan Airways</h3>
               <p className="text-[#020340]">
