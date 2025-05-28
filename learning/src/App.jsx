@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Blog from './services.jsx'
 import smileWoman from './assets/satisfied-woman.png'
 import group from './assets/Group 11.png'
 import arrow from './assets/arrow-right.png'
@@ -13,51 +14,50 @@ import meetingRoom from './assets/image.png'
 
 let navbar = ["Home", "Services", "Testimonials", "About", "Contact"]
 
-const services = [
-  {
-    title: "Brand Identity Design",
-    description: "Create a cohesive and unique identity that reflects your brand’s essence.",
-    icon: path,
-    color: "bg-pink-200"
-  },
-  {
-    title: "Logo Design",
-    description: "Design logos and visual systems that make your brand instantly recognizable.",
-    icon: design,
-    color: "bg-blue-200"
-  },
-  {
-    title: "Graphic Design",
-    description: "Design stunning graphics that communicate your brand’s message effectively.",
-    icon: designTools,
-    color: "bg-green-300"
-  },
-  {
-    title: "Product Design",
-    description: "Design products that are both functional and visually appealing.",
-    icon: pentool,
-    color: "bg-green-200"
-  },
-  {
-    title: "Web & Digital Design",
-    description: "Build engaging digital experiences that convert visitors into customers.",
-    icon: message,
-    color: "bg-gray-200"
-  },
+export default function App() {
+  const [navOpen, setNavOpen] = useState(false);
+  const [services, setServices] = useState([
+    {
+      title: "Brand Identity Design",
+      description: "Create a cohesive and unique identity that reflects your brand’s essence.",
+      icon: path,
+      color: "bg-pink-200"
+    },
+    {
+      title: "Logo Design",
+      description: "Design logos and visual systems that make your brand instantly recognizable.",
+      icon: design,
+      color: "bg-blue-200"
+    },
+    {
+      title: "Graphic Design",
+      description: "Design stunning graphics that communicate your brand’s message effectively.",
+      icon: designTools,
+      color: "bg-green-300"
+    },
+    {
+      title: "Product Design",
+      description: "Design products that are both functional and visually appealing.",
+      icon: pentool,
+      color: "bg-green-200"
+    },
+    {
+      title: "Web & Digital Design",
+      description: "Build engaging digital experiences that convert visitors into customers.",
+      icon: message,
+      color: "bg-gray-200"
+    },
   {
     title: "Consulting & Workshops",
     description: "Empower your team with brand training and expert guidance.",
     icon: bezier,
     color: "bg-purple-300"
-  },
-];
+  }
+]); // <-- Close the useState array here
 
-export default function App() {
-  const [navOpen, setNavOpen] = useState(false);
-
-  return (
-    <div className="bg-[#F9F9F9] w-full min-h-screen flex flex-col items-center">
-      {/* Navbar */}
+return (
+  <div className="bg-[#F9F9F9] w-full min-h-screen flex flex-col items-center">
+    {/* Navbar */}
       <nav id='home' className="max-w-7xl w-full h-16 flex justify-between items-center mx-auto px-4 pt-4 relative">
         <p className="flex items-center pt-2">
           <b className="text-[#020340]">Brand</b>
@@ -154,30 +154,7 @@ export default function App() {
             <p className="text-[#020340] text-[15px] md:text-[24px] mb-4">
               Building brands with strategy, creativity, and precision.
             </p>
-            <div
-              className="
-                grid 
-                grid-cols-1
-                sm:grid-cols-2
-                lg:grid-cols-3
-                gap-6
-                justify-center
-                items-stretch
-                w-full
-              "
-            >
-              {services.map((service, i) => (
-                <div className={`flex p-4 bg-white rounded-lg shadow-md items-start hover:${service.color}`} key={i}>
-                  <img className={`w-[36px] h-[30px] p-1 ${service.color} m-2 rounded`} src={service.icon} alt="" />
-                  <span className="flex flex-col items-start w-full">
-                    <h1 className="font-bold text-[#020340] mb-1">{service.title}</h1>
-                    <p className="text-start text-[#020340]">
-                      {service.description}
-                    </p>
-                  </span>
-                </div>
-              ))}
-            </div>
+            < Blog services={services}/>
           </div>
         </div>
       </section>
@@ -246,7 +223,7 @@ export default function App() {
           <h3 className="text-lg md:text-2lg font-semibold text-center md:text-left flex-1">
             Join our community for branding tips and insights straight to your inbox.
           </h3>
-          <form className="flex w-full md:w-auto flex-1 max-w-xl" action="mailto:midejayeoba1@gmail.com" method="post" enctype="text/plain">
+          <form className="flex w-full md:w-auto flex-1 max-w-xl" action="mailto:midejayeoba1@gmail.com" method="post" encType="text/plain">
             <input
               type="email"
               placeholder="Enter email address"
