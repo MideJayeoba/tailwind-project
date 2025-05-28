@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Blog from './services.jsx'
+import Blog from './components/services.jsx'
+import Testimonials from './components/testimonials.jsx'
 import smileWoman from './assets/satisfied-woman.png'
 import group from './assets/Group 11.png'
 import arrow from './assets/arrow-right.png'
@@ -54,6 +55,24 @@ export default function App() {
     color: "bg-purple-300"
   }
 ]); // <-- Close the useState array here
+
+const [testimonials, setTestimonials] = useState([
+  {
+    name: "Taiwan Airways",
+    feedback: "BrandFolio transformed our brand into something we’re incredibly proud of. Their creativity and professionalism are unmatched.",
+    color: "border-green-600"
+  },
+  {
+    name: "Taiwan Airways",
+    feedback: "Working with BrandFolio was a game-changer. The branding has truly resonated with our audience.",
+    color: "border-blue-700"
+  },
+  {
+    name: "Taiwan Airways",
+    feedback: "BrandFolio transformed our brand into something we’re incredibly proud of. Their creativity and professionalism are unmatched.",
+    color: "border-purple-700"
+  }
+]);
 
 return (
   <div className="bg-[#F9F9F9] w-full min-h-screen flex flex-col items-center">
@@ -172,29 +191,8 @@ return (
             </p>
           </div>
           {/* Right: Testimonial Cards */}
-          <div className="flex-1 flex flex-col gap-8 mt-8 md:mt-0">
-            <div className="bg-white rounded-lg shadow-md p-6 relative max-w-xl ml-auto border-l-4 border-green-600">
-              <span className="absolute top-4 right-6 text-3xl text-[#020340] font-bold select-none">”</span>
-              <h3 className="font-bold text-[#020340] mb-1">Taiwan Airways</h3>
-              <p className="text-[#020340]">
-                BrandFolio transformed our brand into something we’re incredibly proud of. Their creativity and professionalism are unmatched.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6 relative max-w-xl ml-auto border-l-4 border-blue-700">
-              <span className="absolute top-4 right-6 text-3xl text-[#020340] font-bold select-none">”</span>
-              <h3 className="font-bold text-[#020340] mb-1">Taiwan Airways</h3>
-              <p className="text-[#020340]">
-                Working with BrandFolio was a game-changer. The branding has truly resonated with our audience.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6 relative max-w-xl ml-auto border-l-4 border-purple-700">
-              <span className="absolute top-4 right-6 text-3xl text-[#020340] font-bold select-none">”</span>
-              <h3 className="font-bold text-[#020340] mb-1">Taiwan Airways</h3>
-              <p className="text-[#020340]">
-                BrandFolio transformed our brand into something we’re incredibly proud of. Their creativity and professionalism are unmatched.
-              </p>
-            </div>
-          </div>
+          < Testimonials testimonials={testimonials} />
+          
         </div>
       </section>
 
