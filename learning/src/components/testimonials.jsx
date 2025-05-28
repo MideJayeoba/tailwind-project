@@ -1,5 +1,5 @@
-export default function Testimonials(props){
-    testimonials = props.testimonials;
+export default function Testimonials({ testimonials }) {
+    // const testimonials = props.testimonials;
     return (
         <div className="flex-1 flex flex-col gap-8 mt-8 md:mt-0">
         {testimonials.map((testimony) =>  

@@ -1,8 +1,5 @@
 
-
-const Blog = (props) => {
-    const services = props.services;
-
+export default function Blog({ services }) {
     return (
     <div
         className="
@@ -34,4 +31,3 @@ const Blog = (props) => {
     );
 
 }
-export default Blog;
