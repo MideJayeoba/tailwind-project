@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Form from './components/form.jsx'
 import Blog from './components/services.jsx'
 import Testimonials from './components/testimonials.jsx'
 import smileWoman from './assets/satisfied-woman.png'
@@ -16,6 +17,11 @@ import meetingRoom from './assets/image.png'
 let navbar = ["Home", "Services", "Testimonials", "About", "Contact"]
 
 export default function App() {
+  const [formOpen, setFormOpen] = useState(false);
+  const toggleForm = () => {
+    setFormOpen(!formOpen);
+  }
+
   const [navOpen, setNavOpen] = useState(false);
   const [services, setServices] = useState([
     {
@@ -112,11 +118,14 @@ return (
               </a>
             </li>
           ))}
-          <button className="ml-0 md:ml-4 px-4 py-1 bg-[#FF8533] rounded-full text-[#F9F9F9] hover:bg-[#020340] transition-colors duration-400 w-full md:w-auto mt-2 md:mt-0">
+          <button 
+          onClick={toggleForm}
+          className="ml-0 md:ml-4 px-4 py-1 bg-[#FF8533] rounded-full text-[#F9F9F9] hover:bg-[#020340] transition-colors duration-400 w-full md:w-auto mt-2 md:mt-0">
             Join for free
           </button>
         </ul>
       </nav>
+      {formOpen && < Form formOpen={formOpen} close={toggleForm} />}
 
       {/* Hero Section */}
       <section id="home" className="max-w-7xl w-full mx-auto px-4">
@@ -130,9 +139,10 @@ return (
           <p className="flex w-full max-w-[818px] text-[16px] md:text-[18px] justify-center text-center text-[#020340] pb-6 md:pb-10">
             We create bold and memorable brand identities that connect with your audience and drive growth. Let’s build your story together.
           </p>
-          <button className="px-4 py-1 bg-[#FF8533] rounded-xl text-[#F9F9F9] mb-6 hover:bg-[#020340] transition-colors duration-400">
+          <button className="px-4 py-1 bg-[#FF8533] rounded-xl text-[#F9F9F9] mb-6 hover:bg-[#020340] transition-colors duration-400" onClick={toggleForm}>
             Get Started
           </button>
+          {formOpen && < Form formOpen={formOpen} close={toggleForm} />}
           <img
             src={smileWoman}
             alt=""
@@ -156,7 +166,7 @@ return (
             </p>
             <a
               className="flex items-center bg-none text-[#FF8533] text-[18px] md:text-[20px] rounded-lg w-fit px-3 py-2 hover:text-[#F9F9F9] hover:bg-[#020340] transition-colors duration-200"
-              href=""
+              href="#about"
             >
               Learn more
               <img className="pl-2 w-5 h-5" src={arrow} alt="" />
@@ -209,9 +219,10 @@ return (
             <p className="text-[#020340] text-lg md:text-xl mb-8 max-w-lg">
               Let’s work together to create a brand that speaks volumes. Whether you’re just starting out or need a refresh, we’re here to help.
             </p>
-            <button className="bg-[#FF8533] text-white px-8 py-4 rounded-2xl text-lg font-medium hover:bg-[#020340] transition-colors duration-300">
+            <button className="bg-[#FF8533] text-white px-8 py-4 rounded-2xl text-lg font-medium hover:bg-[#020340] transition-colors duration-300" onClick={toggleForm}>
               Contact Us Today
             </button>
+            {formOpen && < Form formOpen={formOpen} close={toggleForm} />}
           </div>
         </div>
       </section>
@@ -237,6 +248,7 @@ return (
             >
               Join us
             </button>
+            {formOpen && < Form formOpen={formOpen} close={toggleForm} />}
           </form>
         </div>
       </section>
@@ -248,26 +260,40 @@ return (
             <span className="text-3xl font-bold text-[#020340]">Brand<span className="text-white">Folio</span></span>
           </div>
           {/* Quick Links */}
-          <div className="flex-1 mb-8 md:mb-0">
-            <h4 className="text-2xl font-bold text-[#020340] mb-4">Quick links</h4>
-            <ul className="space-y-2 text-lg text-[#020340]">
-              <li>Home</li>
-              <li>About</li>
-              <li>Services</li>
-              <li>Portfolio</li>
-            </ul>
-          </div>
-          {/* Social Media */}
+                <div className="flex-1 mb-8 md:mb-0">
+                <h4 className="text-2xl font-bold text-[#020340] mb-4">Quick links</h4>
+                <ul className="space-y-2 text-lg text-[#020340]">
+                  <li>
+                  <a href="#home" className="hover:text-white transition-colors duration-200">Home</a>
+                  </li>
+                  <li>
+                  <a href="#about" className="hover:text-white transition-colors duration-200">About</a>
+                  </li>
+                  <li>
+                  <a href="#services" className="hover:text-white transition-colors duration-200">Services</a>
+                  </li>
+                  <li>
+                  <a href="#testimonials" className="hover:text-white transition-colors duration-200">Testimonials</a>
+                  </li>
+                  <li>
+                  <a href="#contact" className="hover:text-white transition-colors duration-200">Contact</a>
+                  </li>
+                </ul>
+                </div>
+                {/* Social Media */}
           <div className="flex-1 mb-8 md:mb-0">
             <h4 className="text-2xl font-bold text-[#020340] mb-4">Social Media</h4>
             <div className="flex items-center space-x-6 text-3xl">
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/mide_jayeoba/profilecard/?igsh=MTI4NjQzMHlva2Nweg==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" className="w-8 h-8" />
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/mide-jayeoba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" className="w-8 h-8" />
               </a>
-              <a href="#" aria-label="X">
+              <a href="https://github.com/MideJayeoba" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="X" className="w-8 h-8" />
+              </a>
+              <a href="https://x.com/midejayeoba" aria-label="X" target="_blank" rel="noopener noreferrer">
                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" className="w-8 h-8" />
               </a>
             </div>
@@ -276,10 +302,18 @@ return (
           <div className="flex-1">
             <h4 className="text-2xl font-bold text-[#020340] mb-4">Contact</h4>
             <ul className="space-y-4 text-lg text-[#020340]">
-              <li>info@brandfolio.com</li>
-              <li>+123 456 7890</li>
-              <li>123 Branding Lane, City, Country</li>
-            </ul>
+                <li>
+                  <a href="mailto:midejayeoba1@gmail.com" className="hover:underline">midejayeoba1@gmail.com</a>
+                </li>
+                <li>
+                  <a href="tel:+2349067333517" className="hover:underline">+234 9067333517</a>
+                </li>
+                <li>
+                  <a href="https://www.google.com/maps/search/?api=1&query=123+Branding+Lane,+City,+Country" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    123 Branding Lane, City, Country
+                  </a>
+                </li>
+              </ul>
           </div>
         </div>
       </footer>
