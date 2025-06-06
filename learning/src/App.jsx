@@ -81,7 +81,7 @@ const [testimonials, setTestimonials] = useState([
 ]);
 
 return (
-  <div className="bg-[#F9F9F9] w-full min-h-screen flex flex-col items-center">
+  <div className="bg-gradient-to-br from-[#F9F9F9] via-white to-pink-100 w-full min-h-screen flex flex-col items-center">
     {/* Navbar */}
       <nav id='home' className="max-w-7xl w-full h-16 flex justify-between items-center mx-auto px-4 pt-4 relative">
         <p className="flex items-center pt-2">
@@ -128,7 +128,7 @@ return (
       {formOpen && < Form formOpen={formOpen} close={toggleForm} />}
 
       {/* Hero Section */}
-      <section id="home" className="max-w-7xl w-full mx-auto px-4">
+      <section id="home" className="bg-gradient-to-br from-[#F9F9F9] via-sky-100 to-pink-100 max-w-7xl w-full mx-auto px-4">
         <p className="mt-10 md:mt-28 flex justify-center font-sora text-green-600 text-center text-[15px] md:text-[17px]">
           Your sure plug for business growth
         </p>
