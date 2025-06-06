@@ -81,7 +81,7 @@ const [testimonials, setTestimonials] = useState([
 ]);
 
 return (
-  <div className="bg-gradient-to-br from-[#F9F9F9] via-white to-pink-100 w-full min-h-screen flex flex-col items-center">
+  <div className="bg-[#F9F9F9] w-full min-h-screen flex flex-col items-center">
     {/* Navbar */}
       <nav id='home' className="max-w-7xl w-full h-16 flex justify-between items-center mx-auto px-4 pt-4 relative">
         <p className="flex items-center pt-2">
